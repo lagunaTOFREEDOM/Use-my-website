@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cute Zoo</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(#87ceeb, #e0f7fa);
+    }
+
+    .title {
+      text-align: center;
+      font-size: 28px;
+      margin-top: 20px;
+      color: #333;
+    }
+
+    .zoo {
+      position: relative;
+      width: 100%;
+      height: 80vh;
+      background: #a8e6a3;
+      border-top: 5px solid #6b4f2a;
+    }
+
+    .animal {
+      position: absolute;
+      font-size: 50px;
+      animation: walk 10s linear infinite alternate;
+    }
+
+    /* Different speeds for each animal */
+    .lion { animation-duration: 12s; top: 50%; }
+    .panda { animation-duration: 10s; top: 60%; }
+    .penguin { animation-duration: 8s; top: 70%; }
+    .monkey { animation-duration: 9s; top: 40%; }
+    .elephant { animation-duration: 14s; top: 55%; }
+
+    @keyframes walk {
+      0% {
+        left: 0%;
+        transform: scaleX(1);
+      }
+      50% {
+        transform: scaleX(1);
+      }
+      51% {
+        transform: scaleX(-1); /* flip direction */
+      }
+      100% {
+        left: 80%;
+        transform: scaleX(-1);
+      }
+    }
+
+    .ground {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 50px;
+      background: #6b4f2a;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="title">Welcome to the Cute Zoo 🐾</div>
+
+  <div class="zoo">
+    <div class="animal lion">🦁</div>
+    <div class="animal panda">🐼</div>
+    <div class="animal penguin">🐧</div>
+    <div class="animal monkey">🐒</div>
+    <div class="animal elephant">🐘</div>
+
+    <div class="ground"></div>
+  </div>
+
+</body>
+</html>
